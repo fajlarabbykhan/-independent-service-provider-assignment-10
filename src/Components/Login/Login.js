@@ -115,7 +115,7 @@ const Login = () => {
                     createError && <p className='text-danger'>{createError.message}</p>
                 }
                 {
-                    createUser && <p className='text-success'>User Create Successfully</p>
+                    createUser && <p className='text-success'>User Created Successfully</p>
                 }
                 {
                     user && <p className='text-success'>User Login Successfully</p>
