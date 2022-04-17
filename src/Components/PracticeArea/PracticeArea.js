@@ -1,9 +1,15 @@
 import React from 'react';
+import useData from '../../useData/useData';
+import SinglePractices from '../SinglePractices/SinglePractices';
 
 const PracticeArea = () => {
+    const practicesDatas = useData('services.json')
+    // console.log(practicesDatas);
     return (
-        <div>
-            <h2>This is practice area</h2>
+        <div className='row m-4 '>
+            {
+                practicesDatas?.map(practicesData => <SinglePractices key={practicesData.id} practicesData={practicesData}></SinglePractices>)
+            }
         </div>
     );
 };

@@ -4,7 +4,7 @@ import ActiveLink from '../../ActiveLink/ActiveLink';
 import aita from '../../Images/Aita-Law-logo-336x50.png'
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg   navbar-light" style={{ backgroundColor: "#e3f2fd", fontSize: "18px", fontWeight: "bold" }}>
+        <nav className="navbar navbar-expand-lg   navbar-light sticky-top" style={{ backgroundColor: "#e3f2fd", fontSize: "18px", fontWeight: "bold" }}>
             <div className="container">
                 <ActiveLink className="navbar-brand" to="/"><img src={aita} alt="" /></ActiveLink>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
