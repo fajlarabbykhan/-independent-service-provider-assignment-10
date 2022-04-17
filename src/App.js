@@ -8,6 +8,7 @@ import About from './Components/About/About';
 import Login from './Components/Login/Login';
 import NotFound from './Components/NotFound/NotFound';
 import PracticeDetails from './Components/PracticeDetails/PracticeDetails';
+import RequireAuth from './RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -19,7 +20,11 @@ function App() {
         <Route path='practice-area' element={<PracticeArea></PracticeArea>}></Route>
         <Route path='blogs' element={<Blogs></Blogs>}></Route>
         <Route path='about' element={<About></About>}></Route>
-        <Route path='/practice-area/:areaId' element={<PracticeDetails></PracticeDetails>}></Route>
+        <Route path='/practice-area/:areaId' element={
+          <RequireAuth>
+            <PracticeDetails></PracticeDetails>
+          </RequireAuth>
+        }></Route>
         <Route path='login' element={<Login></Login>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>

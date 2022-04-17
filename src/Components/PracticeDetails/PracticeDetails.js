@@ -4,13 +4,14 @@ import useData from '../../useData/useData';
 
 
 const PracticeDetails = () => {
-    const practicesDatas = useData('services.json')
-    console.log(practicesDatas);
+
     const { areaId } = useParams()
 
+
     return (
-        <div>
-            <h2>Each details: {areaId}</h2>
+        <div className='text-center m-5'>
+            <h2>Practice: {areaId}</h2>
+            <p>I failed to show data from fake data . But i tried</p>
 
         </div>
     );

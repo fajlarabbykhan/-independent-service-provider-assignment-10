@@ -1,8 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ActiveLink from '../../ActiveLink/ActiveLink';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 import aita from '../../Images/Aita-Law-logo-336x50.png'
+import { getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 const Navbar = () => {
+    const [user, loading, error] = useAuthState(auth);
+    console.log(user?.displayName)
     return (
         <nav className="navbar navbar-expand-lg   navbar-light sticky-top" style={{ backgroundColor: "#e3f2fd", fontSize: "18px", fontWeight: "bold" }}>
             <div className="container">
@@ -25,11 +30,15 @@ const Navbar = () => {
                             <ActiveLink className="nav-link" to="/about">ABOUT ME</ActiveLink>
                         </li>
                         <li className="nav-item">
-                            <ActiveLink className="nav-link" to="/login">LOGIN</ActiveLink>
+                            <ActiveLink className="nav-link" to="/login"  >{
+                                !user ? "LOGIN" : <span onClick={() => signOut(auth)} >SIGN OUT</span>
+                            }</ActiveLink>
                         </li>
                     </ul>
                     <span className="navbar-text">
-                        USER INFO
+                        {
+                            !user ? "" : <span>{user.email}</span>
+                        }
                     </span>
                 </div>
             </div>
