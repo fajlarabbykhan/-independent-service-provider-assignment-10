@@ -1,7 +1,7 @@
 
 # AITA LAW,LLC Project Requirements
 
-AITA LAW,LLC is a React Web App powered by Fake Data. [</ Live Link>]()
+AITA LAW,LLC is a React Web App powered by Fake Data. [</ Live Link>](https://aita-law-llc.web.app/)
 
 ## Total Pages: 06
 
