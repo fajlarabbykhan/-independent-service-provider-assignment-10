@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -8,7 +8,6 @@ import GoogleLogo from '../../Images/google.svg'
 
 
 const Login = () => {
-
     const [login, setLogin] = useState(true)
 
     const [confirmError, setConfirmError] = useState('');
@@ -34,6 +33,10 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    //sign in with google..................
+
+
 
 
     const [loginUser, loginloading, loginerror] = useAuthState(auth);
