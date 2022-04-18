@@ -1,5 +1,5 @@
 
-# Hour Passion Project Requirements
+# AITA LAW,LLC Project Requirements
 
 AITA LAW,LLC is a React Web App powered by Fake Data. [</ Live Link>]()
 
@@ -27,6 +27,6 @@ AITA LAW,LLC is a React Web App powered by Fake Data. [</ Live Link>]()
     
 3.  REACT ROUTER DOM [</ Documentation>](https://reactrouter.com/docs/en/v6/getting-started/overview)
 
-4. GOOGLE FIREBASE [<Documentation>](https://firebase.google.com/)
+4. GOOGLE FIREBASE [</ Documentation>](https://firebase.google.com/)
 
-5. REACT-FIREBASE-HOOKS [<Documentation>](https://github.com/CSFrequency/react-firebase-hooks)
+5. REACT-FIREBASE-HOOKS [</ Documentation>](https://github.com/CSFrequency/react-firebase-hooks)
