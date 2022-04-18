@@ -3,6 +3,7 @@ import { useCreateUserWithEmailAndPassword, useSignInWithEmailAndPassword } from
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
+import GoogleLogo from '../../Images/google.svg'
 
 
 
@@ -102,7 +103,7 @@ const Login = () => {
 
 
 
-                        login ? 'Uncheck me  if you do not have an account.' : 'check me  if you have an account.'
+                        login ? 'Check me  if you do not have an account.' : 'Uncheck me  if you have an account.'
 
 
                     }</label>
@@ -121,6 +122,15 @@ const Login = () => {
                     user && <p className='text-success'>User Login Successfully</p>
                 }
             </form>
+            <div className='container d-flex align-items-center w-50 mx-auto'>
+                <div className='bg-success w-50 ' style={{ height: '1px' }}></div>
+                <p className='mt-3 p-2'>OR</p>
+                <div className='bg-success w-50 ' style={{ height: '1px' }}></div>
+
+            </div>
+            <div className=''>
+                <button className='btn btn-primary w-40 d-block mx-auto'><img src={GoogleLogo} alt="" /> <span>Continue With Google</span></button>
+            </div>
         </div>
     )
 }

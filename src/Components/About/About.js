@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import profile from '../../Images/dummy-user.png'
 const About = () => {
     return (
@@ -8,13 +9,10 @@ const About = () => {
                     <img src={profile} className="rounded-circle" alt="" />
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a  natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <h5 class="card-title">Fajla Rabby Khan</h5>
+                    <p class="card-text">I am still learning. I think ,I need to improve my self very hardly.To know more about me click here <a href="https://www.facebook.com/" target="_blank">My FB</a>,<a href="https://www.linkedin.com/" target="_blank"> My LinkedIn </a></p>
                 </div>
-                <div class="card-footer text-muted">
-                    2 days ago
-                </div>
+
             </div>
         </div>
     );
